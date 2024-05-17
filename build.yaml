@@ -18,7 +18,7 @@
 #
 ---
 include:
-  - board: nrf52840_m2
+  - board: nordic_nrf52840_dk
     shield: lily58_left
-  - board: nrf52840_m2
+  - board: nordic_nrf52840_dk
     shield: lily58_right
