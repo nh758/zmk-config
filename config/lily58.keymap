@@ -57,11 +57,29 @@
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |   Next|  +   |   -   |   =   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
+&trans    &to 0 &to 1 &to 2  &to 3  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
 &kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
 &kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &trans   &trans      
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &kp C_NEXT &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        colemak {
+// ------------------------------------------------------------------------------------------------------------
+// |  ---  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+// |  TAB  | --- |  W  |  F   |  P   |  B   |                   | ---  |   L   |   U   |  Y   |   ;   |   -   |
+// |  CTRL |  A  |  R  |  S   |  T   |  G   |                   |  M   |   N   |   E   |  I   |   O   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  D   |  V   |  ---   |  | Next  |  K   |   H   |   Q   |  J   |   /   | SHIFT |
+//                     | ALT  | ESC  | LOWER|  SPACE |  | ENTER |  --- | BSPC  | RAISE |
+            bindings = <
+&trans    &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6  &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
+&kp TAB   &trans &kp W  &kp F    &kp P    &kp B                      &trans  &kp L    &kp U     &kp Y   &kp SEMI &kp MINUS
+&kp LCTRL &kp A  &kp R  &kp S    &kp T    &kp G                      &kp M   &kp N    &kp E     &kp I   &kp O    &kp SQT
+&kp LSHFT &kp Z  &kp X  &kp C    &kp D    &kp V  &kp LBKT   &kp C_PP &kp K   &kp H    &kp Q     &kp J   &kp FSLH &kp RSHFT
+                        &kp LALT &kp ESC  &mo 1  &kp SPACE  &kp RET  &kp Y   &kp BSPC &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
